@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sk_example_db
+    username: sk_example_user
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
