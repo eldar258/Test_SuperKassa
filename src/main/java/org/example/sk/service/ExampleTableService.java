@@ -15,6 +15,7 @@ public class ExampleTableService {
 
     private final ExampleTableRepository exampleTableRepository;
 
+    @Transactional
     public int modify(long id, int add) throws Exception {
         int updateCount;
         try {
