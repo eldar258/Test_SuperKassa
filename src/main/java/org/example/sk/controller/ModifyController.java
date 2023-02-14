@@ -17,7 +17,7 @@ public class ModifyController {
     private final ExampleTableService exampleTableService;
 
     @PostMapping("/modify")
-    public ResponseEntity<JsonNode> modify(@RequestBody ModifyRequest request) {
+    public ResponseEntity<JsonNode> modify(@RequestBody ModifyRequest request) throws Exception {
         ObjectNode response = JsonNodeFactory.instance.objectNode();
         response.put("current", exampleTableService.modify(request.id(), request.add()));
         return ResponseEntity.ok(response);
