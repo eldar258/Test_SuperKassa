@@ -2,7 +2,7 @@ package org.example.sk.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.sk.model.responce.ModifyResponse;
-import org.example.sk.reposytory.ExampleTableRepository;
+import org.example.sk.repository.ExampleTableRepository;
 import org.springframework.stereotype.Service;
 
 @Service

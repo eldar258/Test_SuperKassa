@@ -1,4 +1,4 @@
-package org.example.sk.reposytory;
+package org.example.sk.repository;
 
 import java.util.Optional;
 import org.example.sk.model.entity.ExampleTable;
