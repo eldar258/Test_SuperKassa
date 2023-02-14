@@ -7,6 +7,7 @@ import org.example.sk.exception.DataUpdateException;
 import org.example.sk.model.entity.ExampleTable;
 import org.example.sk.repository.ExampleTableRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -28,7 +29,7 @@ public class ExampleTableService {
         int result = 0;
         Optional<ExampleTable> exampleTableOptional = exampleTableRepository.findById(id);
         if (exampleTableOptional.isPresent()) {
-            result = exampleTableOptional.get().getObj().get("current").asInt();
+            result = exampleTableOptional.get().getObj().getCurrent();
         }
 
         return result;
